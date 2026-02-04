@@ -69,11 +69,10 @@ A small personal finance tool to record and review expenses. You can add expense
 
 ## Trade-offs and not done
 
-- **Idempotency keys** – Stored in the same JSON file with no TTL. Keys are not expired; for long-lived use you could add a cleanup (e.g. by time).
-- **No auth** – As per requirements; the app does not implement login or user isolation.
-- **Concurrency** – Writes are serialized per process to avoid corrupting the JSON file; multiple processes writing at once would need external locking or a different store.
-- **Summary by category** – Not implemented in the first version; can be added as a nice-to-have (e.g. total per category).
-- **Tests** – No automated tests in this version; the plan listed basic tests as optional follow-up.
+- **Idempotency keys** – Stored in the same JSON file with no TTL. Keys are not expired.
+- **No auth** – Too overkill for a simple implementation as such.
+- **Concurrency** – Writes are serialized per process to avoid corrupting the JSON file. Multiple processes writing at once would need external locking or a different store.
+- **JSON files for storage** - To ensure simplicity as the app is a **Personal** expense tracker, which means it is not being used at scale currently.
 
 ## Folder structure (high level)
 
