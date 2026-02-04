@@ -1,0 +1,18 @@
+{
+  "expenses": [
+    {
+      "id": "a803a040-683f-4f3a-89aa-e51b6e688727",
+      "amount": 27800,
+      "category": "Lunch",
+      "description": "Ordered from Zomato",
+      "date": "2026-02-04",
+      "created_at": "2026-02-04T07:10:13.819Z"
+    }
+  ],
+  "idempotencyKeys": {
+    "6a7c66c6-44c8-4708-9114-e301347b084f": {
+      "expenseId": "a803a040-683f-4f3a-89aa-e51b6e688727",
+      "createdAt": "2026-02-04T07:10:13.819Z"
+    }
+  }
+}
