@@ -1,6 +1,7 @@
 # Expense Tracker
 
 A small personal finance tool to record and review expenses. You can add expenses, view a list, filter by category, sort by date, and see the total of the visible list.
+
 [Deployed Link](https://expense-tracker-pi-topaz-16.vercel.app/)
 
 ## Tech stack
