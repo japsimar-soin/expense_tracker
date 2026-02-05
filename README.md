@@ -1,26 +1,13 @@
 # Expense Tracker
 
 A small personal finance tool to record and review expenses. You can add expenses, view a list, filter by category, sort by date, and see the total of the visible list.
-
-## What this project is
-
-- **Backend:** Node.js API (Next.js API routes) with `POST /api/expenses` and `GET /api/expenses`.
-- **Frontend:** Simple web UI (Next.js + ShadCN) with a form to add expenses, a list/table, category filter, date sort (newest first by default), and a total for the current list.
-- **Storage:** A JSON file on disk (`data/expenses.json`) so data survives server restarts.
+[Deployed Link](https://expense-tracker-pi-topaz-16.vercel.app/)
 
 ## Tech stack
 
-- **Next.js 14** (App Router) – frontend and API routes.
-- **ShadCN** – UI components (Button, Input, Select, Table, Label).
-- **TypeScript** – for the whole project.
-- **Storage** – JSON file in `data/expenses.json` (no database).
-
-## Why a JSON file?
-
-- Data is kept across restarts (unlike in-memory only).
-- No database setup or extra process.
-- Easy to backup and inspect the file.
-- Fits a small, single-user tool that you might extend later.
+- **Backend:** Node.js API (Next.js API routes) 
+- **Frontend:** Next.js + ShadCN UI + TypeScript
+- **Storage:** A JSON file on disk 
 
 ## Design decisions
 
@@ -73,6 +60,13 @@ A small personal finance tool to record and review expenses. You can add expense
 - **No auth** – Too overkill for a simple implementation as such.
 - **Concurrency** – Writes are serialized per process to avoid corrupting the JSON file. Multiple processes writing at once would need external locking or a different store.
 - **JSON files for storage** - To ensure simplicity as the app is a **Personal** expense tracker, which means it is not being used at scale currently.
+
+## Why a JSON file?
+
+- Data is kept across restarts (unlike in-memory only).
+- No database setup or extra process.
+- Easy to backup and inspect the file.
+- Fits a small, single-user tool that you might extend later.
 
 ## Folder structure (high level)
 
